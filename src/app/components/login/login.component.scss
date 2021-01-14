@@ -1,0 +1,25 @@
+.login {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+    border-radius: 5px;
+    width: 300px;
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      margin: 15px 25px;
+
+    }
+    .button-container {
+      margin-bottom: 15px;
+    }
+  }
+}

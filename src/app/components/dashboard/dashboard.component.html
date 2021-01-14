@@ -1,0 +1,39 @@
+<div class="header">
+  <div class="admin" routerLink="/admin" >
+    <a *ngIf="currentUser?.role === role.Admin">Admin Panel</a>
+  </div>
+  <div class="user-info">
+      <p>{{currentUser?.first_name}}</p>
+      <p>{{currentUser?.last_name}}</p>
+    <button class="button" type="button" (click)="logout()">Logout</button>
+  </div>
+</div>
+<div class="main-content">
+  <h3>User Assessment report</h3>
+  <div class="assessments" *ngFor="let assessment of userAssessments">
+    <p>{{assessment?.name}}</p>
+    <p>{{assessment?.users_resolved}}</p>
+    <img [src]="assessment?.image_url" alt="">
+    <button class="button" (click)="getGraph(assessment?.id)">Report</button>
+  </div>
+  <div class="graph" *ngIf="isActive">
+    <table>
+      <tr>
+        <td>Agreeableness</td>
+        <td>{{userAssessmentGraph.data?.Agreeableness}}</td>
+      </tr>
+      <tr>
+        <td>Drive</td>
+        <td>{{userAssessmentGraph.data?.Drive}}</td>
+      </tr>
+      <tr>
+        <td>Luck</td>
+        <td>{{userAssessmentGraph.data?.Luck}}</td>
+      </tr>
+      <tr>
+        <td>Openess</td>
+        <td>{{userAssessmentGraph.data?.Openess}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

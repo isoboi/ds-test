@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+.input {
+  height: 30px;
+  border: none;
+  border-radius: 5px ;
+}
+.button {
+  height: 30px;
+  width: 100px;
+  background-color: darkkhaki;
+  border: none;
+  border-radius: 5px ;
+}
+.button:hover{
+  cursor: pointer;
+}

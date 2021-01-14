@@ -1,0 +1,17 @@
+<div class="login">
+  <form [formGroup]="form" class="form">
+    <div class="input-container">
+      <label>Please enter your email</label>
+      <input class="input" type="email" formControlName="email">
+    </div>
+    <div class="input-container">
+      <label>Please enter your password</label>
+        <input class="input" type="password" formControlName="password">
+    </div>
+    <div class="button-container">
+      <button type="submit" class="button" (click)="onSubmit()">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
