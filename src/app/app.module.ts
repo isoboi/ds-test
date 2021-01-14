@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import { UserComponent } from './components/dashboard/user/user.component';
 import { AdminComponent } from './components/dashboard/admin/admin.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {fakeBackendProvider} from './helpers/fake-backend.interceptor';
@@ -17,7 +16,6 @@ import {JwtInterceptor} from './helpers/jwt.interceptor';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    UserComponent,
     AdminComponent
   ],
   imports: [

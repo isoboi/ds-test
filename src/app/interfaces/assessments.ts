@@ -1,5 +1,3 @@
-import {Graph} from './graph';
-
 export interface Assessments {
   id?: number;
   name?: string;

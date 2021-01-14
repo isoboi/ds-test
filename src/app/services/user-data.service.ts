@@ -14,10 +14,6 @@ export class UserDataService {
     private http: HttpClient
   ) { }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`/api/users`);
-  }
-
   getCurrentUser(): Observable<User> {
     return this.http.get<User>(`/api/currentuser`);
   }

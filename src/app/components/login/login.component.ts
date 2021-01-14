@@ -11,7 +11,7 @@ import {AuthService} from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  userData: User;
+
   constructor(
     private router: Router,
     private fb: FormBuilder,
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
      this.authService.login(this.form.get('email').value, this.form.get('password').value)
-       .subscribe(data => this.router.navigate(['/dashboard']));
+       .subscribe(data => this.router.navigate(['/dashboard']), error => console.log(error));
   }
 
 }

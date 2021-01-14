@@ -6,7 +6,7 @@ import {Graph} from '../../interfaces/graph';
 import {AuthService} from '../../services/auth.service';
 import {Role} from '../../interfaces/role.enum';
 import {Router} from '@angular/router';
-import {Subscription} from 'rxjs';
+
 
 @Component({
   selector: 'app-dashboard',
